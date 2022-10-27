@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @devlog %>
+
+<div>
+  <%= link_to "Edit this devlog", edit_devlog_path(@devlog) %> |
+  <%= link_to "Back to devlogs", devlogs_path %>
+
+  <%= button_to "Destroy this devlog", @devlog, method: :delete %>
+</div>

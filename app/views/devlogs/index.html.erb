@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Devlogs</h1>
+
+<div id="devlogs">
+  <% @devlogs.each do |devlog| %>
+    <%= render devlog %>
+    <p>
+      <%= link_to "Show this devlog", devlog %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New devlog", new_devlog_path %>

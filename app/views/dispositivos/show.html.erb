@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @dispositivo %>
+
+<div>
+  <%= link_to "Edit this dispositivo", edit_dispositivo_path(@dispositivo) %> |
+  <%= link_to "Back to dispositivos", dispositivos_path %>
+
+  <%= button_to "Destroy this dispositivo", @dispositivo, method: :delete %>
+</div>

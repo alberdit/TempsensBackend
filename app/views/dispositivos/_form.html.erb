@@ -1,0 +1,37 @@
+<%= form_with(model: dispositivo) do |form| %>
+  <% if dispositivo.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(dispositivo.errors.count, "error") %> prohibited this dispositivo from being saved:</h2>
+
+      <ul>
+        <% dispositivo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :devices, style: "display: block" %>
+    <%= form.text_field :devices %>
+  </div>
+
+  <div>
+    <%= form.label :identificador, style: "display: block" %>
+    <%= form.text_field :identificador %>
+  </div>
+
+  <div>
+    <%= form.label :mail, style: "display: block" %>
+    <%= form.text_field :mail %>
+  </div>
+
+  <div>
+    <%= form.label :prioridad, style: "display: block" %>
+    <%= form.number_field :prioridad %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
