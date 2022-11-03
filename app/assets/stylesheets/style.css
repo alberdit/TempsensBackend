@@ -1,0 +1,15 @@
+html,body{
+    margin: 0px; margin-block-start: 0px;
+}
+.be-red{
+    background-color: rgb(200,50,50);
+}
+.white{
+    color: white;
+}
+.largepadding{
+    padding: 15px 10px;
+}
+.li{
+    list-style:none; font-size:22px;
+}

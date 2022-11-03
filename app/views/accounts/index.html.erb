@@ -1,14 +1,32 @@
 <p style="color: green"><%= notice %></p>
-
+<center>
 <h1>Accounts</h1>
 
 <div id="accounts">
+  <table border="1">
+  <tr>
+      <td>ID</td>
+      <td>Nombre</td>
+      <td>Apellido</td>
+      <td>Mail</td>
+      <td>Devices</td>
+      <td></td>
+    </tr>
   <% @accounts.each do |account| %>
-    <%= render account %>
-    <p>
-      <%= link_to "Show this account", account %>
-    </p>
+    <tr>
+      <td><%=  account.id %></td>
+      <td><%=  account.nombre %></td>
+      <td><%=  account.apellido %></td>
+      <td><%=  account.mail %></td>
+      <td><%=  account.deviceid %></td>	
+      
+        <td><%= link_to "Show this account", account %></td> 
+    </tr>
   <% end %>
+  </table>
+  
 </div>
 
-<%= link_to "New account", new_account_path %>
+<%= link_to "New account", new_account_path %><br>
+<td><%= link_to "Home", welcome_path %></td> 
+</center>

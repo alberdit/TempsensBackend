@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Backend</title>
+    <title>TempSensor</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+  </head> 
 
   <body>
+    <header>
+      <nav class="be-red white large-padding">
+        <ul class="no-list row center-xs">
+          <li class="col-md li">
+          <%= link_to "User Accounts", "accounts" %>
+          </li>
+          <li class="col-md li">
+          <%= link_to "Dispositivos", "dispositivos" %>
+          </li>
+          <li class="col-md li">
+          <%= link_to "Devices Log", "devlogs" %>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
