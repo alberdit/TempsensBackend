@@ -1,9 +1,26 @@
+<center>
 <h1>New account</h1>
+<%= form_for @account do |f| %>
 
-<%= render "form", account: @account %>
+<div class="field">
+  <%= f.text_field :users,  placeholder:"users", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :nombre,  placeholder:"Name", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :mail,  placeholder:"E-mail", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :deviceid,  placeholder:"Devices", style:"height:30px;", class:"form-control" %>
+</div>
+
+
 
 <br>
+<%end%>
 
 <div>
   <%= link_to "Back to accounts", accounts_path %>
 </div>
+</center>

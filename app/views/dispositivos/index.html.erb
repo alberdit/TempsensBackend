@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
-
+<center>
 <h1>Dispositivos</h1>
 
-<div id="dispositivos">
+<table class="be-blue">
+  <tr>
+      <td>ID</td>
+      <td>Nombre</td>
+      <td>Apellido</td>
+      <td>Mail</td>
+      <td>Devices</td>
+    </tr>
   <% @dispositivos.each do |dispositivo| %>
-    <%= render dispositivo %>
-    <p>
-      <%= link_to "Show this dispositivo", dispositivo %>
-    </p>
+   <tr>
+      <td><%= dispositivo.id %></td>
+      <td><%= dispositivo.identificador %></td>
+      <td><%= dispositivo.mail %></td>
+      <td><%= dispositivo.devices %></td>
+      <td><%= link_to "Show this devlog", dispositivo %></td>
+    </tr>
   <% end %>
-</div>
-
+</table>
+<br>
 <%= link_to "New dispositivo", new_dispositivo_path %>
+</center>
+
+

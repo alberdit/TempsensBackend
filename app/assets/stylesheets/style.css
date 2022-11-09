@@ -1,5 +1,5 @@
 html,body{
-    margin: 0px; margin-block-start: 0px;
+    margin: 0px; 
 }
 .be-red{
     background-color: rgb(200,50,50);
@@ -7,9 +7,25 @@ html,body{
 .white{
     color: white;
 }
-.largepadding{
+.large-padding{
     padding: 15px 10px;
 }
 .li{
     list-style:none; font-size:22px;
+}
+table.be-blue{
+    background: #f0f0f3;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    width: 80%;
+    border: 0px;
+    font-size: 20px;
+}
+.btn{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px 12px;
 }
