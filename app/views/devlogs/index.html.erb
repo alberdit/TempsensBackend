@@ -1,14 +1,24 @@
 <p style="color: green"><%= notice %></p>
-
+<center>
 <h1>Devlogs</h1>
 
-<div id="devlogs">
+
+<table class="be-blue">
+  <tr>
+      <td>Device Id</td>
+      <td>Stream Data</td>
+      <td>Created At</td>
+      <td>Updated At</td>
+    </tr>
   <% @devlogs.each do |devlog| %>
-    <%= render devlog %>
-    <p>
-      <%= link_to "Show this devlog", devlog %>
-    </p>
+   <tr>
+      <td><%= devlog.deviceid %></td>
+      <td><%= devlog.data %></td>
+      <td><%= devlog.created_at %></td>
+      <td><%= devlog.updated_at %></td>
+    </tr>
   <% end %>
-</div>
+</table>
+</center>
 
 <%= link_to "New devlog", new_devlog_path %>
