@@ -6,6 +6,7 @@
   <table class="be-blue">
   <tr>
       <td class="bar-color">ID</td>
+      <td>User ID </td>
       <td>Nombre</td>
       <td>Apellido</td>
       <td>Mail</td>
@@ -15,6 +16,7 @@
   <% @accounts.each do |account| %>
     <tr>
       <td><%=  account.id %></td>
+      <td><%=  account.users %></td>
       <td><%=  account.nombre %></td>
       <td><%=  account.apellido %></td>
       <td><%=  account.mail %></td>

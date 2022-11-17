@@ -1,12 +1,20 @@
 <center>
 <h1>New account</h1>
 <%= form_for @account do |f| %>
+  <% @account.errors.full_messages.each do |errormessage| %>
+    <div>
+      * <%= errormessage%>
+    </div>
+  <%end%>
 
 <div class="field">
-  <%= f.text_field :users,  placeholder:"users", style:"height:30px;", class:"form-control" %>
+  <%= f.text_field :users,  placeholder:"User ID", style:"height:30px;", class:"form-control" %>
 </div>
 <div class="field">
   <%= f.text_field :nombre,  placeholder:"Name", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :apellido,  placeholder:"apellido", style:"height:30px;", class:"form-control" %>
 </div>
 <div class="field">
   <%= f.text_field :mail,  placeholder:"E-mail", style:"height:30px;", class:"form-control" %>
@@ -14,12 +22,9 @@
 <div class="field">
   <%= f.text_field :deviceid,  placeholder:"Devices", style:"height:30px;", class:"form-control" %>
 </div>
-
-
-
 <br>
+<%= f.submit "Guardar"%>
 <%end%>
-
 <div>
   <%= link_to "Back to accounts", accounts_path %>
 </div>
