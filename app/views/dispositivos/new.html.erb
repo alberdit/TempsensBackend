@@ -1,9 +1,28 @@
+<center>
 <h1>New dispositivo</h1>
 
-<%= render "form", dispositivo: @dispositivo %>
+
+<%= form_for @dispositivo do |f| %>
+  
 
 <br>
 
-<div>
+<div class="field">
+  <%= f.text_field :devices,  placeholder:"Device", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :identificador,  placeholder:"identificador", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :mail,  placeholder:"Mail", style:"height:30px;", class:"form-control" %>
+</div>
+<div class="field">
+  <%= f.text_field :prioridad,  placeholder:"Prioridad", style:"height:30px;", class:"form-control" %>
+</div>
+<%= f.submit "Guardar"%>
+<%end%>
+
+<div class="field">
   <%= link_to "Back to dispositivos", dispositivos_path %>
 </div>
+</center>

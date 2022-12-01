@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+source "https://rubygems.org"
 ruby "2.7.0"
+gem 'bootstrap', '~> 5.2.2'
 gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
